@@ -1,0 +1,419 @@
+:: StoryTitle
+werewolf_escape_proto
+
+
+:: StoryData
+{
+  "ifid": "4B9DE4CD-C469-4796-83C2-96D22D1050E2",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "start screen",
+  "zoom": 1
+}
+
+
+:: \ 3interact {"position":"200,1000","size":"100,100"}
+You interact with the object. 
+
+[You get an orange piece of paper with the number 4.](code1|[You find nothing of value.](winkwonk|
+
+[[> Back. -> hub2]]
+
+(if:$code1 is false)[
+(set:$roll to (random:1,6))(if:$roll>3)[(set:$spawn1 to true)]
+(if:$spawn1 is true)[(show:?code1)(set:$code1 to true)]
+(else:)[(show:?winkwonk)]]
+(else:)[(show:?winkwonk)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ 4interact {"position":"450,1250","size":"100,100"}
+You interact with the object. 
+
+[You get a colorful piece of paper; it says the numbers 4, 6, 8, and 3.](codefull|[You find nothing of value.](winkwonk|
+
+[[> Back. -> hub2]]
+
+(set:$roll to (random:1,10))(if:$roll is 1)[(set:$spawnfull to true)]
+(if:$spawnfull is true)[(show:?codefull)(set:$codefull to true)]
+(else:)[(show:?winkwonk)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ 5interact {"position":"325,1250","size":"100,100"}
+You interact with the object. 
+
+[You get an orange piece of paper with the number 4.](code1|[You find nothing of value.](winkwonk|
+
+[[> Back. -> hub2]]
+
+(if:$code1 is false)[
+(set:$roll to (random:1,6))(if:$roll>3)[(set:$spawn1 to true)]
+(if:$spawn1 is true)[(show:?code1)(set:$code1 to true)]
+(else:)[(show:?winkwonk)]]
+(else:)[(show:?winkwonk)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ code entry {"position":"850,750","size":"100,100"}
+[The safe glides open. Inside is a [[loaded gun. -> gun safe]]](success|[The safe remains stubbornly closed. 
+
+[[Back. -> hub2]]](failure|
+(set:$codeguess to (prompt: [Enter the code:], ''))
+(if:$codeguess is '4683')[(show:?success)]
+(else:)[(show:?failure)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ cure end {"position":"75,1375","size":"100,100"}
+You cure the guy!
+
+(size:2)[Ending B.]
+
+
+:: \ cure game {"position":"75,1125","size":"100,100"}
+(color: yellow)[> Add wolfsbane.](click-rerun:'Add wolfsbane')[(set:$wolfsbane to it +1)(replace:?wolfsbane)[$wolfsbane]]
+(color: yellow)[> Add spider lily.](click-rerun:'Add spider lily')[(set:$lily to it +1)(replace:?lily)[$lily]]
+(color: yellow)[> Add one-eyed newt.](click-rerun:'Add one-eyed newt')[(set:$newt1 to it +1)(replace:?newt1)[$newt1]]
+(color: yellow)[> Add three-eyed newt.](click-rerun:'Add three-eyed newt')[(set:$newt3 to it +1)(replace:?newt3)[$newt3]]
+(color: yellow)[> Add silver powder.](click-rerun:'Add silver powder')[(set:$silver to it +1)(replace:?silver)[$silver]]
+
+Wolfsbane: [0](wolfsbane|
+Spider Lily: [0](lily|
+One-eyed Newt: [0](newt1|
+Three-eyed Newt: [0](newt3|
+Silver Powder: [0](silver|
+
+[[> Submit. -> cureattempt]]
+[[> Restart. ->> Lab]](click:'Restart')[(set:$clicks to +1)]
+
+
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ cureattempt {"position":"75,1250","size":"100,100"}
+[[[> Bingo. -> cure end]]](correctcure|[Seems you didn't get it quite right.
+
+[[> Back. ->> Lab]]](wrongcure|
+
+(if:$wolfsbane is 2 and $lily is 4 and $newt3 is 1 and $silver is 1)[(show:?correctcure)]
+(else:)[(show:?wrongcure)]
+
+
+:: \ gun end {"position":"975,875","size":"100,100"}
+You shoot that hairy sonofabitch.
+
+(size:2)[Ending A.]
+
+
+:: \ gun safe {"position":"975,750","size":"100,100"}
+Body body body
+
+[[Take the gun. -> gun end]]
+[[Take the silver powder. -> hub2]](click:'Take the silver powder')[(set:$powder to true)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ hub1 {"position":"450,625","size":"100,100"}
+Intro to hub, emphasizing:
+ 
+(color:yellow)[- The guy tied to the chair.](click:'The guy tied to the chair')[He rouses, begins to squirm.]
+(color:yellow)[- The covered windows, the boarded door.](click:'boarded door')[You're trapped.]
+
+[[> Try to speak with the man... -> man intro]]
+
+
+:: \ hub2 {"position":"450,875","size":"100,100"}
+Bigger establishment of hub, with interactable directions.  
+
+
+[[> Try to get some information out of the man. ->man interact]](click:'Interactable 1')[(set:$clicks to it +1)]
+[[> Move to the left side of the room. ->west]](click:'Move to the left side of the room')[(set:$clicks to it +1)]
+[[> Move to the back of the room. ->south]](click:'Move to the back of the room')[(set:$clicks to it +1)]
+[[> Move to the right side of the room. ->east]](click:'Move to the right side of the room.')[(set:$clicks to it +1)]
+
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+Clicks left: (print:$timer)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+
+
+:: \ interact8 {"position":"850,1125","size":"100,100"}
+You interact with the object. 
+
+[You get a blue piece of paper with the number 6.](code2|[You find nothing of value.](winkwonk|
+
+[[> Back. -> hub2]]
+
+(if:$code2 is false)[
+(set:$roll to (random:1,6))(if:$roll>3)[(set:$spawn2 to true)]
+(if:$spawn2 is true)[(show:?code1)(set:$code2 to true)]
+(else:)[(show:?winkwonk)]]
+(else:)[(show:?winkwonk)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+
+:: \ journal {"position":"850,1000","size":"100,100"}
+You learn, predominantly, that the code order is Orange, Blue, Yellow, Red. (color:yellow)[You can also learn some more lore.] (click:'You can also learn some more lore')[(print:[ And earn yourself another click, plus a recipe to memorize:
+- 2 wolfsbane
+- 4 spider lilies
+- A single 3-eyed newt
+- A crushed silver bullet])(set: $clicks to it +1)]
+
+[[> Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: \ man intro {"position":"450,750","size":"100,100"}
+Man dialogue... //You're totally fucked.//
+
+//You need to get out! You have x amount of clicks!//
+
+His eyes dart toward a metal safe...
+
+[[> Look around. -> hub2]]
+
+(set:$code1 to false)(set:$code2 to false)(set:$code3 to false)(set:$code4 to false)
+
+
+:: > FOR DEVS {"position":"575,375","size":"100,100"}
+''Brief style guide:''
+* Anything written in (color:yellow)[yellow] is an optional detail. This will add a click to the click timer, but give the player more flavor text about the given concept. This will not take the player to a new page. 
+* (color:blue)[Blue] links take the player to a new page. They also add a click to the click timer, unless they are labelled "Back." and chain back into hub2.
+* Names of nodes can be changed to better fit the narrative context, but ensure that you use the "Rename" function at the top of the window--otherwise, a new node will be created without any of the native text or code. 
+
+''Brief overview of the code:''
+* hub2 operates on a click-based "timer", which shows the passage of time via the amount of clicks the player has made over the course of the game. In order to ensure this stays consistent throughout, any (color:blue)[blue] or (color:yellow)[yellow] links need to add +1 to the '$ clicks' variable. This will ensure the display changes on the hub page, and the failstate triggers properly. 
+* Interactable 3 and 5 both have a chance to spawn the code1 item, and Interactable 6 and 8 have a chance to spawn the code2 item. If both attempts trigger the fail dialogue, these areas can be 're-searched' until the success dialogue triggers. Once a code item is found, that code item //shouldn't// be findable again--but if you find, during testing, that this isn't the case... whoops.
+* Interactable 4 has a very slim chance to give you the full code. I thought it would be funny. It can be taken out very easily. 
+* The code entry page will only proceed to the two ending branches if the correct code is entered; you do not need to have found all code items to do this, but every attempt takes a click. Currently, I have it configured so that you lock yourself into the gun ending as soon as you take the gun. 
+* You must have unlocked the safe (and taken the herbs) to get the cure option to appear in the lab.
+
+
+:: > Interactable 10 {"position":"725,875","size":"100,100"}
+You interact with the object. 
+
+You get a red piece of paper with the number 3.
+
+[[> Back. -> hub2]]
+
+(set:$code4 to true)
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 3 {"position":"325,1000","size":"100,100"}
+This is an object you can interact with and (color:yellow)[inspect.](click:'inspect')[(print:'When inspecting, you get more info.')(set:$clicks to it +1)]
+
+[[> Interact. -> 3interact]](click:'Interact.')[(set:$clicks to it +1)]
+[[> Back. -> hub2]] 
+
+(set: $turns to 10)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 4 {"position":"450,1125","size":"100,100"}
+This is an object you can interact with and (color:yellow)[inspect.](click:'inspect')[(print:'When inspecting, you get more info.')(set:$clicks to it +1)]
+
+[[> Interact. -> 4interact]](click:'Interact.')[(set:$clicks to it +1)]
+[[> Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 5 {"position":"325,1125","size":"100,100"}
+This is an object you can interact with and (color:yellow)[inspect.](click:'inspect')[(print:'When inspecting, you get more info.')(set:$clicks to it +1)]
+
+[[> Interact. -> 5interact]](click:'Interact.')[(set:$clicks to it +1)]
+[[> Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 6 {"position":"600,1125","size":"100,100"}
+You interact with the object. 
+
+[You get a blue piece of paper with the number 6.](code2|[You find nothing of value.](winkwonk|
+
+[[> Back. -> hub2]]
+
+(if:$code2 is false)[
+(set:$roll to (random:1,6))(if:$roll>3)[(set:$spawn2 to true)]
+(if:$spawn2 is true)[(show:?code1)(set:$code2 to true)]
+(else:)[(show:?winkwonk)]]
+(else:)[(show:?winkwonk)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 7 {"position":"725,1125","size":"100,100"}
+You interact with the object. 
+
+You get a yellow piece of paper with the number 8.
+
+[[> Back. -> hub2]]
+
+(set:$code3 to true)
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Interactable 9 {"position":"725,750","size":"100,100"}
+The safe.
+
+[[> Enter code. -> code entry]](click:'Enter code')[(set:$clicks to it +1)]
+[[> Back. -> hub2]]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: > Lab {"position":"200,1125","size":"100,100"}
+Content content content
+
+[[[> Attempt to make a cure. -> cure game]]](cure|
+[[> Back. -> hub2]]
+
+(if:$powder is true)[(show:?cure)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: controls {"position":"575,125","size":"100,100"}
+- Every click will be counted.
+- Yellow links will reveal more information about inspected objects.
+- Blue links represent actions--movement, code entry, etc. 
+- Do not use the built-in back arrow. This will fuck everything up. 
+
+[[> Back. ->start screen]]
+
+
+:: desk {"position":"725,1000","size":"100,100"}
+Desk. (color:yellow)[More detail.](click:'More detail.')(print:[ Congrats, you got more detail.])(set: $clicks to it +1)
+
+[[> Search through the papers. -> interact8]](click:'Search through the papers')[(set: $clicks to it +1)]
+[[> Open the top drawer. -> journal]](click:'Open the top drawer.')[(set:$clicks to it +1)]
+[[> Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: east {"position":"600,875","size":"100,100"}
+Content content content 
+
+[[> Interactable 9]](click:'Interactable 9')[(set:$clicks to +1)]
+[[> Interactable 10]](click:'Interactable 10')[(set:$clicks to +1)]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+Clicks left: (print:$timer)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: failstate {"position":"575,750","size":"100,100"}
+You failed.
+
+(size:2)[Bad End.]
+
+
+:: fall passage {"position":"450,500","size":"100,100"}
+The fall!
+
+[[> Look around. -> hub1]]
+
+
+:: man interact {"position":"300,875","size":"100,100"}
+Content content content
+
+[[Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: opening crawl {"position":"450,375","size":"100,100"}
+You are //x//, here for //y//. 
+
+- House descrip., moon fullness, etc. 
+- (color:yellow)[Detail. ](click:'Detail.')[More information.]
+
+[[> Progress. ->fall passage]]
+
+
+:: south {"position":"600,1000","size":"100,100"}
+Content content content 
+
+[[> Interactable 6]](click:'Interactable 6')[(set:$clicks to it +1)]
+[[> Interactable 7]](click:'Interactable 7')[(set:$clicks to it +1)]
+[[>Interactable 8 ->desk]](click:'Interactable 8')[(set:$clicks to it +1)]
+[[> Back. -> hub2]]
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
+:: start screen {"position":"575,250","size":"100,100"}
+(size:3)+(align:"=><=")+(box:"X")[Lycanthropy]
+(align:"=><=")+(box:"X")[[> Start ->opening crawl]](align:"=><=")+(box:"X")[[> Controls ->controls]](align:"=><=")+(box:"X")[[> FOR DEVS]]
+
+
+:: west {"position":"450,1000","size":"100,100"}
+Content content content
+
+[[> Interactable 3]](click:'Interactable 3')[(set:$clicks to it +1)]
+[[> Interactable 4]](click:'Interactable 4')[(set:$clicks to it +1)]
+[[> Interactable 5]](click:'Interactable 5')[(set:$clicks to it +1)]
+[[> Lab]](click:'Lab')[(set:$clicks to it +1)]
+[[> Back. -> hub2]] 
+
+(set: $turns to 20)
+(set: $timer to $turns - $clicks)
+(if:$timer is 0)[(go-to:'failstate')]
+
+
