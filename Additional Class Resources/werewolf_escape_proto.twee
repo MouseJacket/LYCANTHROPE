@@ -149,16 +149,27 @@ Body body body
 
 
 :: \ hub1 {"position":"450,625","size":"100,100"}
-Intro to hub, emphasizing:
- 
-(color:yellow)[- The guy tied to the chair.](click:'The guy tied to the chair')[He rouses, begins to squirm.]
-(color:yellow)[- The covered windows, the boarded door.](click:'boarded door')[You're trapped.]
+What would otherwise be a pitch-black room is cleaved in half by the light shining through your impromptu entrance. 
 
-[[> Try to speak with the man... -> man intro]]
+(after:2s)+(t8n:'dissolve')[You have to (color:yellow)[squint,] but you make out...]
+
+(click:'squint')[The hazy shapes of furniture.
+Long, deep scratches in the hardwood floors.
+And, of course...
+
+(color:yellow)[The man.]]
+
+(click:'The man')[He's hunched over in a dining chair. Ropes are slung across his bare, rangy torso and his corded arms. Washed pink in the dusk light, his eyes glint back at you as if covered by a film of tears.
+
+[[> Try to speak with the man... -> man intro]]]
 
 
 :: \ hub2 {"position":"450,875","size":"100,100"}
-Bigger establishment of hub, with interactable directions.  
+At the back of the room, you notice a bed, a desk with drawers, and a side table.
+
+At the left: a table strewn with lab equipment, multiple corkboards covered in paper, and a collection of newspaper and magazine clippings.
+
+And at the right: the safe and a messy coffee table. 
 
 
 [[> Try to get some information out of the man. ->man interact]](click:'Interactable 1')[(set:$clicks to it +1)]
@@ -209,13 +220,25 @@ You learn, predominantly, that the code order is Orange, Blue, Yellow, Red. (col
 
 
 :: \ man intro {"position":"450,750","size":"100,100"}
-Man dialogue... //You're totally fucked.//
+"Hello?" you call out.
 
-//You need to get out! You have x amount of clicks!//
+(after:2s)+(t8n:'dissolve')[The man doesn't stir. You take a breath in and--]
 
-His eyes dart toward a metal safe...
+(after:3s)+(t8n:'dissolve')[(size:2)[SCREEEECH!]]
 
-[[> Look around. -> hub2]]
+(after:4s)+(t8n:'dissolve')[The chair //scrapes// forward, wobbly legs slipping under the man's sudden motion.]
+
+(after:6s)+(t8n:'dissolve')[//"Get out!"// he howls.]
+(after:7s)+(t8n:'dissolve')["What--?"]
+(after:8s)+(t8n:'dissolve')[//"You need to get out of here! There are only five minutes before--"//]
+
+(after:9s)+(t8n:'dissolve')[His (color:yellow)[jaw] pops to the side with a sick //shick.// He lets out a long, low whine, like a kicked dog. (click:'jaw')[You notice, glinting red under the falling sun, that his teeth have begun bulging out from his lips--canines protruding like the branches above.]]
+
+(after:11s)+(t8n:'dissolve')[You look toward the door. //The two-by-fours.// There's no way you're getting out that way. And up... the hole in the roof is too high to reach, the surface above too unsteady to propel yourself through.]
+
+(after:14s)+(t8n:'dissolve')[You glance back toward the man. Between pants, his tongue waggles toward a (color:yellow)[metal safe...](click:'metal safe')[ The kind they store guns in.] It's locked, but if you could find the combination...
+
+[[> Look around. -> hub2]]]
 
 (set:$code1 to false)(set:$code2 to false)(set:$code3 to false)(set:$code4 to false)
 
