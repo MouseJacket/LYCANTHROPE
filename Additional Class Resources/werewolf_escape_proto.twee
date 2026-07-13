@@ -115,6 +115,22 @@ Silver Powder: [0](silver|
 (else:)[(show:?wrongcure)]
 
 
+:: \ fall {"position":"525,500","size":"100,100"}
+You teeter more solidly onto the roof. Your boots make sharp //creeeaks// against the uneven surface. 
+
+(after:3s)+(t8n:'dissolve')[//I'll get my bearings. Rest a little where the bigger animals can't get me. And then--//]
+
+(after:5s)+(t8n:'dissolve')+(size:2)[CRACK!] 
+
+(after:6s)+(t8n:'dissolve')[You let out a sharp cry as the roof crumbles out from under you, and you--]
+
+(after:7s)+(t8n:'dissolve')[(size:2)[THUD!]
+
+--against the solid floor of the cabin.]
+
+(after:9s)+(t8n:'dissolve')[[[> Look around. -> hub1]]]
+
+
 :: \ gun end {"position":"975,875","size":"100,100"}
 You shoot that hairy sonofabitch.
 
@@ -204,11 +220,13 @@ His eyes dart toward a metal safe...
 (set:$code1 to false)(set:$code2 to false)(set:$code3 to false)(set:$code4 to false)
 
 
-:: > FOR DEVS {"position":"575,375","size":"100,100"}
+:: > FOR DEVS {"position":"575,125","size":"100,100"}
 ''Brief style guide:''
 * Anything written in (color:yellow)[yellow] is an optional detail. This will add a click to the click timer, but give the player more flavor text about the given concept. This will not take the player to a new page. 
 * (color:blue)[Blue] links take the player to a new page. They also add a click to the click timer, unless they are labelled "Back." and chain back into hub2.
+* All options are currently marked with a carrot (>) for readability. Please ensure any new options (or rewritten options) also have this.
 * Names of nodes can be changed to better fit the narrative context, but ensure that you use the "Rename" function at the top of the window--otherwise, a new node will be created without any of the native text or code. 
+* Try to keep paragraphs separated by line breaks in the player view (for consistency.)
 
 ''Brief overview of the code:''
 * hub2 operates on a click-based "timer", which shows the passage of time via the amount of clicks the player has made over the course of the game. In order to ensure this stays consistent throughout, any (color:blue)[blue] or (color:yellow)[yellow] links need to add +1 to the '$ clicks' variable. This will ensure the display changes on the hub page, and the failstate triggers properly. 
@@ -321,11 +339,19 @@ Content content content
 (if:$timer is 0)[(go-to:'failstate')]
 
 
-:: controls {"position":"575,125","size":"100,100"}
+:: climb {"position":"400,500","size":"100,100"}
+It's easy enough to do, after all. The cabin is sturdy, made of thick, gnarled logs with plenty of grip under your hiking boots. You pull your way up onto the (color:yellow)[roof]. (click:'roof')[You catch glimpses of shingles, dirtied and weather-beaten, from under a web of vines and moss.] 
+
+(after:5s)+(t8n:'dissolve')[Looking up, you get the clearest view of the sky you've gotten in hours: waves of peach, rosy orange, and violet blur together between the highest branches. Faint stars wink between reddened clouds. And faintly, still near the horizon:
+
+[[> A moon, spotlight-white, like an unblinking eye. -> fall]]]
+
+
+:: controls {"position":"700,250","size":"100,100"}
 - Every click will be counted.
 - Yellow links will reveal more information about inspected objects.
 - Blue links represent actions--movement, code entry, etc. 
-- Do not use the built-in back arrow. This will fuck everything up. 
+- Do not use Twine's built-in back arrow. This will fuck everything up. 
 
 [[> Back. ->start screen]]
 
@@ -360,12 +386,6 @@ You failed.
 (size:2)[Bad End.]
 
 
-:: fall passage {"position":"450,500","size":"100,100"}
-The fall!
-
-[[> Look around. -> hub1]]
-
-
 :: man interact {"position":"300,875","size":"100,100"}
 Content content content
 
@@ -376,13 +396,14 @@ Content content content
 (if:$timer is 0)[(go-to:'failstate')]
 
 
-:: opening crawl {"position":"450,375","size":"100,100"}
-You are //x//, here for //y//. 
+:: opening crawl {"position":"500,375","size":"100,100"}
+(after:2s)+(t8n:'dissolve')[A (color:yellow)[cabin]? In this part of the woods?(click:'cabin')[ Partially sunken, swarmed by vegetation. Under this canopy, it's just a little thing. You'd call it sad if it weren't for the boards slung across its windows: two-by-fours, near-white, held in by creased, silver nails.]]
 
-- House descrip., moon fullness, etc. 
-- (color:yellow)[Detail. ](click:'Detail.')[More information.]
+(after:5s)+(t8n:'dissolve')[...You aren't sure (color:yellow)[why] you do it. (click:'why')[//The sunset,// you try to reason, //I have to see the sunset better.//] You aren't much of a survivalist, sure, but you've always considered yourself relatively cautious.]
 
-[[> Progress. ->fall passage]]
+(after:8s)+(t8n:'dissolve')[But you approach the house. And you begin to climb.
+
+[[> Climb. ->climb]]]
 
 
 :: south {"position":"600,1000","size":"100,100"}
