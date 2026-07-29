@@ -25,20 +25,18 @@ public class BasicMovement : MonoBehaviour
     private void FixedUpdate()
     {
         VertForceCalc();
-        GetInput();
         Movement();
-        CameraManagement();
     }
 
-    private void GetInput()
+    private void Update()
     {
-        moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
-        lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
-        
+        CameraManagement();
     }
+    
 
     private void Movement()
     {
+        moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
         float speed = Mathf.Lerp(walkSpeed, runSpeed, InputSystem.actions["Sprint"].ReadValue<float>());
         float moveForwards = moveInput.y * speed * Time.deltaTime;
         float moveSide = moveInput.x * speed * Time.deltaTime;
@@ -64,6 +62,7 @@ public class BasicMovement : MonoBehaviour
     
     void CameraManagement()
     {
+        lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
         lookDir.x += lookInput.x * Time.deltaTime * lookSpeed;
         lookDir.y -= lookInput.y * Time.deltaTime * lookSpeed;
         lookDir.y = Mathf.Clamp(lookDir.y, -90f, 90f);

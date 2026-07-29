@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 643727094}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -922,6 +922,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3042360399975769495, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
+      propertyPath: selectMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ecfca0203401cb48b7b7f4d8f72206d, type: 2}
+    - target: {fileID: 3042360399975769495, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
+      propertyPath: selectDist
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720123700475231946, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4897532257325051266, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.67614
@@ -965,6 +977,10 @@ PrefabInstance:
     - target: {fileID: 6594122091718279638, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
       propertyPath: m_Name
       value: BasicCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173740743067597814, guid: f80e318b29c38c34881a91bdab3ac8c3, type: 3}
+      propertyPath: lookSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

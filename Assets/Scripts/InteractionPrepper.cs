@@ -14,6 +14,7 @@ public class InteractionPrepper : MonoBehaviour
     {
         movement = GetComponent<BasicMovement>();
         _camera = movement.playerCam;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -24,10 +25,15 @@ public class InteractionPrepper : MonoBehaviour
         if (Physics.Raycast(_camera.transform.position, lookDir, out hit, selectDist) && 
             hit.collider.CompareTag("Selectable"))
         {
+            Debug.Log($"Hit - {hit.collider.gameObject}");
             if (hit.collider.gameObject != highlightedObject)
             {
                 SelectObject(hit.collider.gameObject);
             }
+        }
+        else
+        {
+            DeselectObject();
         }
     }
 
@@ -35,11 +41,20 @@ public class InteractionPrepper : MonoBehaviour
     {
         if (highlightedObject != null)
         {
-            highlightedObject.GetComponent<MeshRenderer>().material = nativeMat;
+            DeselectObject();
         }
 
         highlightedObject = newHighlight;
         nativeMat = highlightedObject.GetComponent<MeshRenderer>().material;
         highlightedObject.GetComponent<MeshRenderer>().material = selectMat;
+    }
+
+    void DeselectObject()
+    {
+        if (highlightedObject != null)
+        {
+            highlightedObject.GetComponent<MeshRenderer>().material = nativeMat;
+            highlightedObject = null;
+        }
     }
 }
