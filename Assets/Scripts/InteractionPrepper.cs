@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class InteractionPrepper : MonoBehaviour
 {
@@ -29,6 +31,13 @@ public class InteractionPrepper : MonoBehaviour
             if (hit.collider.gameObject != highlightedObject)
             {
                 SelectObject(hit.collider.gameObject);
+            }
+
+            if (InputSystem.actions["Interact"].ReadValue<float>() > 0)
+            {
+                Debug.Log($"Interact - {highlightedObject.name}");
+                GameObject.Destroy(highlightedObject);
+                highlightedObject = null;
             }
         }
         else
