@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3536244106427661540}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.504, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionPrepper
   highlightedObject: {fileID: 0}
-  selectDist: 3
+  selectDist: 1.5
   selectMat: {fileID: 2100000, guid: 8ecfca0203401cb48b7b7f4d8f72206d, type: 2}
   nativeMat: {fileID: 0}
   _camera: {fileID: 0}
@@ -245,9 +245,9 @@ MonoBehaviour:
   runSpeed: 8
   lookSpeed: 8
   lookDir: {x: 0, y: 0}
-  gravity: 2
+  gravity: 1
   vertSpeed: 0
-  jumpForce: 0.5
+  jumpForce: 0.2
 --- !u!143 &3953015423277832525
 CharacterController:
   m_ObjectHideFlags: 0
