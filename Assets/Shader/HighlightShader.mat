@@ -54,14 +54,14 @@ Material:
     - _Brightness: 25
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _distortionScale: 20
-    - _noisePower: 2
+    - _distortionScale: 15
+    - _noisePower: 1.15
     - _noiseScale: 5
     - _speed_1: 0.1
-    - _swirlSpeed: 0.5
-    - _twirlStrength: 5
+    - _swirlSpeed: 0.2
+    - _twirlStrength: 1
     m_Colors:
-    - _baseColor: {r: 0.084263444, g: 0.16981131, b: 0, a: 0}
+    - _baseColor: {r: 1, g: 0.034439936, b: 0, a: 0}
     - _speed: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _underColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
