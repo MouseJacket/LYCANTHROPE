@@ -47,7 +47,7 @@ public class BasicMovement : MonoBehaviour
 
     private float VertForceCalc()
     {
-        if (charCon.isGrounded)
+        if (charCon.isGrounded) //Holy shit game changer
         {
             vertSpeed = 0f;
             vertSpeed += InputSystem.actions["Jump"].ReadValue<float>()*jumpForce;
@@ -56,7 +56,6 @@ public class BasicMovement : MonoBehaviour
         {
             vertSpeed -= gravity * Time.deltaTime;
         }
-
         return vertSpeed;
     }
     
