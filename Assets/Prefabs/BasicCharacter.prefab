@@ -219,10 +219,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionPrepper
   highlightedObject: {fileID: 0}
-  selectDist: 1.5
-  selectMat: {fileID: 2100000, guid: 8ecfca0203401cb48b7b7f4d8f72206d, type: 2}
+  selectDist: 1.75
+  selectMat: {fileID: 2100000, guid: 3c6c633f0e6d73546bf082baddf6c9fa, type: 2}
   nativeMat: {fileID: 0}
-  _camera: {fileID: 0}
+  cam: {fileID: 0}
   lookDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7173740743067597814
 MonoBehaviour:
