@@ -8,11 +8,13 @@ public class SkyTimer : MonoBehaviour
     [SerializeField] private GameObject projectionCam;
     [SerializeField] private GameObject moonLightOb;
     [SerializeField] private float intensityPoint;
+    [SerializeField] private GameObject gameOverScreen;
     private Light _moonLight;
     public float timeMax;
     public float timeIn;
     public float timePercent;
     public bool paused;
+    
 
     void Start()
     {
@@ -20,6 +22,7 @@ public class SkyTimer : MonoBehaviour
         _moonLight = moonLightOb.GetComponent<Light>();
         _moonLight.intensity = 0f;
         paused = false;
+        gameOverScreen.SetActive(false);
     }
     
     void Update()
@@ -32,6 +35,8 @@ public class SkyTimer : MonoBehaviour
         {
             Debug.Log("OUT OF TIME!!");
             paused = true;
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0;
         }
         if (timePercent >= intensityPoint)
         {
