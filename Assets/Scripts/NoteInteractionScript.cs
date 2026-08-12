@@ -13,11 +13,13 @@ public class NoteInteractionScript : MonoBehaviour
     [SerializeField] private Color textColor;
     [SerializeField] private TextMeshProUGUI readText;
     [SerializeField] private RawImage noteBackground;
-    private BasicMovement _movement;
+    private InteractionPrepper _interaction;
     private void Start()
     {
+        readText = GameObject.Find("NoteText").GetComponent<TextMeshProUGUI>();
+        noteBackground = GameObject.Find("NoteBackground").GetComponent<RawImage>();
         noteColor = GetComponent<MeshRenderer>().material.color;
-        _movement = FindAnyObjectByType<BasicMovement>().gameObject.GetComponent<BasicMovement>();
+        _interaction = FindAnyObjectByType<BasicMovement>().gameObject.GetComponent<InteractionPrepper>();
         string hexColor = UnityEngine.ColorUtility.ToHtmlStringRGB(textColor);
         Debug.Log($"{gameObject.name} text color - {hexColor}");
         noteText = noteText.Replace("[VAR]", $"<color=#{hexColor}>{noteNum}</color>");
@@ -28,8 +30,7 @@ public class NoteInteractionScript : MonoBehaviour
     {
         if (reading)
         {
-            if (_movement.lookInput.x != 0 || _movement.lookInput.y != 0 ||
-                _movement.moveInput.x != 0 || _movement.moveInput.y != 0 ||
+            if (_interaction.highlightedObject!= gameObject||
                 InputSystem.actions["Interact"].ReadValue<float>() > 0)
             {
                 DropNote();
