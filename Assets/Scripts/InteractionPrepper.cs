@@ -34,10 +34,16 @@ public class InteractionPrepper : MonoBehaviour
 
             if (InputSystem.actions["Interact"].ReadValue<float>() > 0)
             {
-                Debug.Log($"Interact - {highlightedObject.name}");
-                
-                Destroy(highlightedObject); //Replace with interaction method, associate JSON or MonoBehavior
-                highlightedObject = null;
+                if (highlightedObject.GetComponent<NoteInteractionScript>())
+                {
+                    highlightedObject.GetComponent<NoteInteractionScript>().ReadNote();
+                }
+                else
+                {
+                    Debug.Log($"Interact - {highlightedObject.name}");
+                    Destroy(highlightedObject); //Replace with interaction method, associate JSON or MonoBehavior
+                    highlightedObject = null;
+                }
             }
         }
         else

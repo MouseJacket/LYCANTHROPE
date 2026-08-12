@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class BasicMovement : MonoBehaviour
 {
-    [SerializeField] private Vector2 moveInput;
-    [SerializeField] private Vector2 lookInput;
+    public Vector2 moveInput;
+    public Vector2 lookInput;
     public Vector3 movement;
     [SerializeField] private CharacterController charCon;
     public Camera playerCam;
