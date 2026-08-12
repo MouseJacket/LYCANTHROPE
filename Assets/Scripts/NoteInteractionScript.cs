@@ -21,7 +21,6 @@ public class NoteInteractionScript : MonoBehaviour
         noteColor = GetComponent<MeshRenderer>().material.color;
         _interaction = FindAnyObjectByType<BasicMovement>().gameObject.GetComponent<InteractionPrepper>();
         string hexColor = UnityEngine.ColorUtility.ToHtmlStringRGB(textColor);
-        Debug.Log($"{gameObject.name} text color - {hexColor}");
         noteText = noteText.Replace("[VAR]", $"<color=#{hexColor}>{noteNum}</color>");
         DropNote();
     }

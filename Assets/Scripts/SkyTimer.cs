@@ -12,22 +12,27 @@ public class SkyTimer : MonoBehaviour
     public float timeMax;
     public float timeIn;
     public float timePercent;
+    public bool paused;
 
     void Start()
     {
         RenderSettings.skybox.SetFloat("_Exposure", 1.3f);
         _moonLight = moonLightOb.GetComponent<Light>();
         _moonLight.intensity = 0f;
+        paused = false;
     }
     
     void Update()
     {
-        timePercent = TimeUpdate();
+        if (!paused)
+        {
+            timePercent = TimeUpdate();
+        }
         if (timePercent >= 1f)
         {
             Debug.Log("OUT OF TIME!!");
+            paused = true;
         }
-        
         if (timePercent >= intensityPoint)
         {
             float newPercent = (timePercent - intensityPoint) / (1 - intensityPoint);
@@ -39,7 +44,7 @@ public class SkyTimer : MonoBehaviour
     }
 
     float TimeUpdate()
-    {
+    {//Setting up manual time scaling should allow for us to avoid some funkiness.
         timeIn += Time.deltaTime;
         return timeIn / timeMax;
     }
