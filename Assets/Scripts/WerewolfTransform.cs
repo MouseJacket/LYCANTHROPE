@@ -17,13 +17,18 @@ public class WerewolfTransform : MonoBehaviour
         increment = 1f/states.Length;
         _filter = GetComponent<MeshFilter>();
         timer = FindAnyObjectByType<SkyTimer>();
+        _filter.mesh = states[0];
     }
     void Update()
     {
         currentState = (int)Math.Floor(timer.timePercent / increment);
         if (!IsVisible())
         {
-            _filter.mesh = states[currentState];
+            if (_filter.mesh != states[currentState])
+            {
+                Debug.Log($"Werewolf state change - state {currentState}");
+                _filter.mesh = states[currentState];
+            }
         }
     }
 
