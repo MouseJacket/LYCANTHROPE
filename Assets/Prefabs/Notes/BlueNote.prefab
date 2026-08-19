@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16b757570348f8947b3589204c0fe304, type: 2}
+  - {fileID: 2100000, guid: b8d16eb5817a9b340a737b94a84850f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,10 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949888705a618cc40ae0e9257d66d411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteInteractionScript
-  noteText: This note's code is <color="blue">[VAR]</color>.
+  noteText: "I want to start by saying that I\u2019m incredibly grateful to you all
+    for being here. Brigette was nothing if not humble. She wouldn\u2019t believe
+    you when you told her just how many lives she\u2019d touched. You are all proof
+    of how loved she is. It was only [VAR] days ago that we lost her. We\u2019re
+    still learning to change our routine.  The kids and I never had any sort of plan
+    for this. I bet you can tell by how scattered I am that she was the \r\n\r\n"
   noteNum: 6
   noteColor: {r: 0, g: 0, b: 0, a: 0}
   reading: 0
-  textColor: {r: 0, g: 0.08579709, b: 0.554717, a: 0}
+  textColor: {r: 0, g: 0.12156863, b: 0.8, a: 0}
   readText: {fileID: 0}
   noteBackground: {fileID: 0}

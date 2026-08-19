@@ -26,7 +26,6 @@ public class WerewolfTransform : MonoBehaviour
         {
             if (_filter.mesh != states[currentState])
             {
-                Debug.Log($"Werewolf state change - state {currentState}");
                 _filter.mesh = states[currentState];
             }
         }

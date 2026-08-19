@@ -11,9 +11,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03e29a40-7048-4336-b3eb-dace471dc925" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BasicCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cabin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cabin.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Bed/mattress norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Bed/mattress norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Chair/wood_norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Chair/wood_norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Couch/leather norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Couch/leather norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Couch/wood_norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Couch/wood_norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Desk/wood_norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Desk/wood_norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Gunsafe/T_GunSafe_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Gunsafe/T_GunSafe_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Kitchen/T_Kitchen_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Kitchen/T_Kitchen_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Ladder/T_Ladder_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Ladder/T_Ladder_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Lantern/T_LanternBody_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Lantern/T_LanternBody_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Noteboard/boardframe norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Noteboard/boardframe norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Noteboard/cork norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Noteboard/cork norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Shelf/T_Shelf_N_v002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Shelf/T_Shelf_N_v002.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Stove/T_Stove_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Stove/T_Stove_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Syringe/norm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Syringe/norm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/WallShelf/T_WallShelf_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/WallShelf/T_WallShelf_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Wardrobe/T_Wardrobe_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Wardrobe/T_Wardrobe_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/T_Chains_N.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/T_Chains_N.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Notes/BlueNote.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Notes/BlueNote.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Notes/GreenNote.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Notes/GreenNote.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Notes/RedNote.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Notes/RedNote.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Notes/YellowNote.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Notes/YellowNote.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoteInteractionScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoteInteractionScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoteManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoteManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WerewolfTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WerewolfTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +128,7 @@
       <workItem from="1785287077258" duration="3472000" />
       <workItem from="1785304239231" duration="18188000" />
       <workItem from="1786632783446" duration="447000" />
+      <workItem from="1787098016057" duration="8062000" />
     </task>
     <servers />
   </component>

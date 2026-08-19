@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class NoteInteractionScript : MonoBehaviour
 {
-    public string noteText;
+    [TextArea] public string noteText;
     public string noteNum;
     public Color noteColor;
     public bool reading;
@@ -20,8 +20,12 @@ public class NoteInteractionScript : MonoBehaviour
         noteBackground = GameObject.Find("NoteBackground").GetComponent<RawImage>();
         noteColor = GetComponent<MeshRenderer>().material.color;
         _interaction = FindAnyObjectByType<BasicMovement>().gameObject.GetComponent<InteractionPrepper>();
+    }
+
+    public void Resync()
+    {
         string hexColor = UnityEngine.ColorUtility.ToHtmlStringRGB(textColor);
-        noteText = noteText.Replace("[VAR]", $"<color=#{hexColor}>{noteNum}</color>");
+        noteText = noteText.Replace("[VAR]", $"<b><color=#{hexColor}>{noteNum}</color></b>");
         DropNote();
     }
 
