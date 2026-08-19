@@ -9,6 +9,7 @@ public class NoteManager : MonoBehaviour
     public GameObject[] spots;
     public int code;
     public GameObject[] codeOrder;
+    [SerializeField] private GameObject orderNote;
         
     void Start()
     {
@@ -20,12 +21,14 @@ public class NoteManager : MonoBehaviour
         ApplyCode(code);
         for (int i = 0; i < notes.Length; i++)
         {
-            Match(notes[i].gameObject, spots[i].transform);
+            MatchPos(notes[i].gameObject, spots[i].transform);
         }
         foreach (GameObject spot in spots)
         {
             Destroy(spot);
         }
+        FormatOrderNote();
+        FindAnyObjectByType<KeypadScript>().code = code.ToString();
     }
     
     GameObject[] ReShuffle(GameObject[] array) //https://discussions.unity.com/t/randomize-array-in-c/443241/5
@@ -59,9 +62,29 @@ public class NoteManager : MonoBehaviour
     }
     
 
-    void Match(GameObject obj, Transform target)
+    void MatchPos(GameObject obj, Transform target)
     {
         obj.transform.position = target.position;
         obj.transform.rotation = target.rotation;
+    }
+
+    void FormatOrderNote()
+    {
+        NoteInteractionScript noteScript = orderNote.GetComponent<NoteInteractionScript>();
+        string noteText = noteScript.noteText;
+        for (int i = 0; i < 4; i++)
+        {
+            noteText = noteText.Replace($"[Color{i}]", FormatColorText(
+                codeOrder[i].GetComponent<NoteInteractionScript>()));
+        }
+        orderNote.GetComponent<NoteInteractionScript>().noteText = noteText;
+        Debug.Log("Order Note Formatted");
+    }
+
+    string FormatColorText(NoteInteractionScript note)
+    {
+        string textColor = UnityEngine.ColorUtility.ToHtmlStringRGB(
+            note.GetComponent<NoteInteractionScript>().textColor);
+        return $"<b><color=#{textColor}>{note.name.ToLower()}</color></b>";
     }
 }

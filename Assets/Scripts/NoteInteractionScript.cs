@@ -10,7 +10,7 @@ public class NoteInteractionScript : MonoBehaviour
     public string noteNum;
     public Color noteColor;
     public bool reading;
-    [SerializeField] private Color textColor;
+    public Color textColor;
     [SerializeField] private TextMeshProUGUI readText;
     [SerializeField] private RawImage noteBackground;
     private InteractionPrepper _interaction;

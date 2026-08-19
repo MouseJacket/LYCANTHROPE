@@ -18,6 +18,7 @@ public class WerewolfTransform : MonoBehaviour
         _filter = GetComponent<MeshFilter>();
         timer = FindAnyObjectByType<SkyTimer>();
         _filter.mesh = states[0];
+        gameObject.tag = "Untagged";
     }
     void Update()
     {
@@ -36,4 +37,5 @@ public class WerewolfTransform : MonoBehaviour
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);
         return planes.All(plane => plane.GetDistanceToPoint(transform.position) >= 0); //Linq.All()
     }
+    
 }
