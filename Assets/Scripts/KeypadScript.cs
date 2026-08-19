@@ -1,6 +1,7 @@
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 
@@ -8,6 +9,7 @@ public class KeypadScript : MonoBehaviour
 {
     private BasicMovement _movement;
     public string code;
+    public bool interacting;
     [SerializeField] private string codeAttempt;
     [SerializeField] private GameObject resume;
     [SerializeField] private Button[] buttons;
@@ -24,10 +26,22 @@ public class KeypadScript : MonoBehaviour
         KeypadDown();
     }
 
+    // void Update()
+    // {
+    //     if (interacting)
+    //     {
+    //         if (InputSystem.actions["Interact"].ReadValue<float>() > 0)
+    //         {
+    //             KeypadDown(); //Need to add additional tick coroutine
+    //         }
+    //     }
+    // }
+
     public void KeypadUp()
     {
         _movement.MenuInteraction(true);
         resume.SetActive(true);
+        interacting = true;
     }
 
     public void KeypadDown()
@@ -35,6 +49,7 @@ public class KeypadScript : MonoBehaviour
         _movement.MenuInteraction(false);
         resume.SetActive(false);
         codeAttempt = "";
+        interacting = false;
     }
 
     private void CodeCorrect()

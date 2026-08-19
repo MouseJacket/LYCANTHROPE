@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeypadScript
   code: 
+  interacting: 0
   codeAttempt: 
   resume: {fileID: 141474464}
   buttons:
@@ -5877,6 +5878,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8348811188444946184, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -8277103680874617203, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5889,14 +5894,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: -6119448370096691429, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -6115604542291507236, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5554994385583879434, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
+    - target: {fileID: -5178893519514299842, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -4985237320838212284, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4218712247732919490, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -3864426918803906313, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_TagString
       value: Selectable
@@ -5905,10 +5926,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: -3711847023787477914, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -2708785313018821471, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: -2160584916787375395, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
+    - target: {fileID: -1933208910451589159, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: -71396367373396621, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.7015505
@@ -5969,6 +6002,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.697
       objectReference: {fileID: 0}
+    - target: {fileID: 459360628965180630, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: 629026975225451652, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.088
@@ -5977,6 +6014,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_EntireCabin_Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 1181496759063812650, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
+    - target: {fileID: 2656180465790197637, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: 4832363811356994722, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6029,6 +6074,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: 7877197926452467256, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
+    - target: {fileID: 8071200884523440840, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
+    - target: {fileID: 9056034668774985389, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbce42b9a6e41d149867a574bf81caf9, type: 2}
     - target: {fileID: 9142533424404529823, guid: cb38fdb34c9b0164b8020832e08edb44, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -13627,7 +13684,7 @@ PrefabInstance:
     - target: {fileID: 5303444064183286963, guid: 6eacfdeca5e4a7647b8d77c47196a578, type: 3}
       propertyPath: 'states.Array.data[4]'
       value: 
-      objectReference: {fileID: 6754204754780665970, guid: 4243c433ed13c8a4ebc78ab64767d260, type: 3}
+      objectReference: {fileID: 2959467708922500008, guid: 23349b1bd8b2a2441b293ae9aa8d9cf3, type: 3}
     - target: {fileID: 6173707321745467803, guid: 6eacfdeca5e4a7647b8d77c47196a578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.04

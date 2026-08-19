@@ -63,12 +63,12 @@ public class BasicMovement : MonoBehaviour
     
     void CameraManagement()
     {
-        lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
-        lookDir.x += lookInput.x * Time.deltaTime * lookSpeed;
-        lookDir.y -= lookInput.y * Time.deltaTime * lookSpeed;
-        lookDir.y = Mathf.Clamp(lookDir.y, -90f, 90f);
         if (!menuInteracting)
         {
+            lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
+            lookDir.x += lookInput.x * Time.deltaTime * lookSpeed;
+            lookDir.y -= lookInput.y * Time.deltaTime * lookSpeed;
+            lookDir.y = Mathf.Clamp(lookDir.y, -90f, 90f);
             transform.localRotation = Quaternion.Euler(0f, lookDir.x, 0f);
             playerCam.transform.localRotation = Quaternion.Euler(lookDir.y, 0f, 0f);
         }
