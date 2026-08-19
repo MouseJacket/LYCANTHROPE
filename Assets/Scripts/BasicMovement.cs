@@ -7,6 +7,7 @@ public class BasicMovement : MonoBehaviour
     public Vector2 moveInput;
     public Vector2 lookInput;
     public Vector3 movement;
+    public bool menuInteracting;
     [SerializeField] private CharacterController charCon;
     public Camera playerCam;
     [SerializeField] private float walkSpeed;
@@ -16,6 +17,7 @@ public class BasicMovement : MonoBehaviour
     [SerializeField] private float gravity;
     [SerializeField] private float vertSpeed;
     [SerializeField] private float jumpForce;
+    
 
     private void Start()
     {
@@ -61,11 +63,27 @@ public class BasicMovement : MonoBehaviour
     
     void CameraManagement()
     {
-        lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
-        lookDir.x += lookInput.x * Time.deltaTime * lookSpeed;
-        lookDir.y -= lookInput.y * Time.deltaTime * lookSpeed;
-        lookDir.y = Mathf.Clamp(lookDir.y, -90f, 90f);
-        transform.localRotation = Quaternion.Euler(0f, lookDir.x, 0f);
-        playerCam.transform.localRotation = Quaternion.Euler(lookDir.y, 0f, 0f);
+        if (!menuInteracting)
+        {
+            lookInput = InputSystem.actions["Look"].ReadValue<Vector2>();
+            lookDir.x += lookInput.x * Time.deltaTime * lookSpeed;
+            lookDir.y -= lookInput.y * Time.deltaTime * lookSpeed;
+            lookDir.y = Mathf.Clamp(lookDir.y, -90f, 90f);
+            transform.localRotation = Quaternion.Euler(0f, lookDir.x, 0f);
+            playerCam.transform.localRotation = Quaternion.Euler(lookDir.y, 0f, 0f);
+        }
+    }
+
+    public void MenuInteraction(bool interacting)
+    {
+        menuInteracting = interacting;
+        if (interacting)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

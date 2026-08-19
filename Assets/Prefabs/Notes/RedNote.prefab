@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89aa91757687b5e448bb8a6526745c11, type: 2}
+  - {fileID: 2100000, guid: b8d16eb5817a9b340a737b94a84850f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,10 +125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949888705a618cc40ae0e9257d66d411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteInteractionScript
-  noteText: This note's code is [VAR].
+  noteText: "<b>Retrain your Brain with 5 Short Memory Exercises!</b>\\n <i>Number
+    1: Reverse Sentences</i>\\n For example: If your friend says, \u2018The sky is
+    clear tonight,\u2019 you would say, \u2018Tonight clear is sky the.\u2019\\n\r\nAim
+    to do this at least [VAR] times per day for maximum results, including faster
+    recall and reduction of the appearance of dementia symptoms.\r\n "
   noteNum: 6
   noteColor: {r: 0, g: 0, b: 0, a: 0}
   reading: 0
-  textColor: {r: 0.5471698, g: 0, b: 0, a: 0}
+  textColor: {r: 0.8392157, g: 0, b: 0, a: 0}
   readText: {fileID: 0}
   noteBackground: {fileID: 0}

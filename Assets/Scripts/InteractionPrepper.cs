@@ -1,16 +1,21 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 
 public class InteractionPrepper : MonoBehaviour
 {
     private BasicMovement movement;
     public GameObject highlightedObject;
+    public bool hasGun = false;
     [SerializeField] private float selectDist;
     [SerializeField] private Material selectMat;
     [SerializeField] private Material nativeMat;
     [SerializeField] private Camera cam;
     [SerializeField] private Vector3 lookDir;
+    [SerializeField] private Image winScreen;
+    [SerializeField] private TextMeshProUGUI readText;
     
     void Start()
     {
@@ -37,6 +42,21 @@ public class InteractionPrepper : MonoBehaviour
                 if (highlightedObject.GetComponent<NoteInteractionScript>())
                 {
                     highlightedObject.GetComponent<NoteInteractionScript>().ReadNote();
+                }
+                else if (highlightedObject.GetComponent<KeypadScript>())
+                {
+                    highlightedObject.GetComponent<KeypadScript>().KeypadUp();
+                }
+                else if (highlightedObject.GetComponent<RevolverGrab>())
+                {
+                    highlightedObject.GetComponent<RevolverGrab>().GetGun();
+                }
+                else if (highlightedObject.GetComponent<WerewolfTransform>())
+                {
+                    if (hasGun)
+                    {
+                        RevolverEnding();
+                    }
                 }
                 else
                 {
@@ -71,5 +91,13 @@ public class InteractionPrepper : MonoBehaviour
             highlightedObject.GetComponent<MeshRenderer>().material = nativeMat;
             highlightedObject = null;
         }
+    }
+
+    void RevolverEnding()
+    {
+        winScreen.gameObject.SetActive(true);
+        readText.text = "You Killed Lucas Morgan";
+        DeselectObject();
+        Time.timeScale = 0;
     }
 }

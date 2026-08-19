@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9caa085e354b784fa583381a466f3a2, type: 2}
+  - {fileID: 2100000, guid: b8d16eb5817a9b340a737b94a84850f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,10 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949888705a618cc40ae0e9257d66d411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteInteractionScript
-  noteText: This note's code is <color="green">[VAR]</color>.
+  noteText: "HAP E FATHERS DAY!!\n\r\nmE and mom are mising you! I am doing good
+    but I am sad some time at skool becaz they had bring your parent day and you
+    could not come so I am glad it is only [VAR] more days until you come\n\r\nOkay
+    bye \r\nFROM BELLA\r\n"
   noteNum: 6
   noteColor: {r: 0, g: 0, b: 0, a: 0}
   reading: 0
-  textColor: {r: 0.06206393, g: 0.4113207, b: 0, a: 0}
+  textColor: {r: 0.06206393, g: 0.8, b: 0, a: 0}
   readText: {fileID: 0}
   noteBackground: {fileID: 0}
