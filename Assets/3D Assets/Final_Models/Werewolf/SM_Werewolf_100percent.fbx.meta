@@ -3,7 +3,22 @@ guid: b76f12d7f23d7ea468cd5381da36736d
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Monster_100percent
+    second: {fileID: 2100000, guid: 23744a3a604850b4ca35da78d2b3b84b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlayerMaterial
+    second: {fileID: 2100000, guid: 6265e4552a74ca743a117b3d8e745df9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 0c7beeb963add084097e026a18802486, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

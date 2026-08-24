@@ -38,13 +38,18 @@ public class BasicMovement : MonoBehaviour
 
     private void Movement()
     {
-        moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
-        float speed = Mathf.Lerp(walkSpeed, runSpeed, InputSystem.actions["Sprint"].ReadValue<float>());
-        float moveForwards = moveInput.y * speed * Time.deltaTime;
-        float moveSide = moveInput.x * speed * Time.deltaTime;
-        movement = (transform.forward*moveForwards)+(transform.right*moveSide)
-            +vertSpeed*transform.up;
-        charCon.Move(movement);
+        if (!menuInteracting)
+        {
+            moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
+            float speed = Mathf.Lerp(walkSpeed, runSpeed, InputSystem.actions["Sprint"]
+                .ReadValue<float>());
+            float moveForwards = moveInput.y * speed * Time.deltaTime;
+            float moveSide = moveInput.x * speed * Time.deltaTime;
+            movement = (transform.forward*moveForwards)+(transform.right*moveSide)
+                +vertSpeed*transform.up;
+            charCon.Move(movement);
+        }
+        
     }
 
     private float VertForceCalc()
