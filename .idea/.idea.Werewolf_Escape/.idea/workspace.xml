@@ -11,8 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03e29a40-7048-4336-b3eb-dace471dc925" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_100percent_v002.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_50percent_v002.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_0percent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_0percent.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_0percent_v002.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_0percent_v002.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_100percent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_100percent.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_25percent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_25percent.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_50percent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_50percent.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_75percent.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/SM_Werewolf_75percent.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cabin - Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cabin - Beta.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BasicMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BasicMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KeypadScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KeypadScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractionPrepper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionPrepper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoteManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoteManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +36,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragAndDrop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IngredientScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SyringeScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -106,7 +122,8 @@
       <workItem from="1786632783446" duration="447000" />
       <workItem from="1787098016057" duration="12558000" />
       <workItem from="1787113412678" duration="5572000" />
-      <workItem from="1787148032011" duration="320000" />
+      <workItem from="1787148032011" duration="3930000" />
+      <workItem from="1787517742184" duration="19738000" />
     </task>
     <servers />
   </component>

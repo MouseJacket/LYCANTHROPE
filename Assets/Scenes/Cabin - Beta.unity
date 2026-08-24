@@ -7893,7 +7893,7 @@ MonoBehaviour:
   moonLightOb: {fileID: 1125336350}
   intensityPoint: 0.5
   gameOverScreen: {fileID: 966100844}
-  timeMax: 150
+  timeMax: 180
   timeIn: 0
   timePercent: 0
   paused: 0

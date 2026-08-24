@@ -19,4 +19,5 @@ public class RevolverGrab : MonoBehaviour
         revolverHeld.SetActive(true);
         Destroy(revolverObj);
     }
+    
 }

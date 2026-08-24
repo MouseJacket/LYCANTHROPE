@@ -9,6 +9,7 @@ public class InteractionPrepper : MonoBehaviour
     private BasicMovement movement;
     public GameObject highlightedObject;
     public bool hasGun = false;
+    public bool hasSyringe = false;
     [SerializeField] private float selectDist;
     [SerializeField] private Material selectMat;
     [SerializeField] private Material nativeMat;
@@ -43,9 +44,17 @@ public class InteractionPrepper : MonoBehaviour
                 {
                     highlightedObject.GetComponent<NoteInteractionScript>().ReadNote();
                 }
+                else if (highlightedObject.GetComponent<IngredientScript>())
+                {
+                    highlightedObject.GetComponent<IngredientScript>().Grab();
+                }
                 else if (highlightedObject.GetComponent<KeypadScript>())
                 {
                     highlightedObject.GetComponent<KeypadScript>().KeypadUp();
+                }
+                else if (highlightedObject.GetComponent<Cure>())
+                {
+                    highlightedObject.GetComponent<Cure>().MenuUp();
                 }
                 else if (highlightedObject.GetComponent<RevolverGrab>())
                 {

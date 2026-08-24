@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,7 +10,9 @@ public class NoteManager : MonoBehaviour
     public GameObject[] spots;
     public int code;
     public GameObject[] codeOrder;
+    public Dictionary<string,bool> ingredients = new Dictionary<string, bool>();
     [SerializeField] private GameObject orderNote;
+    
         
     void Start()
     {
