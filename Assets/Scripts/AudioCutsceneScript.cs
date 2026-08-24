@@ -28,6 +28,8 @@ public class AudioCutsceneScript : MonoBehaviour
         screenText.text = "";
         duration = source.clip.length;
         StartCoroutine(DelayedIntroFade());
+        source = GetComponent<AudioSource>();
+        screenText = FindAnyObjectByType<TextMeshProUGUI>();
     }
 
     private IEnumerator DelayedIntroFade()
@@ -49,7 +51,7 @@ public class AudioCutsceneScript : MonoBehaviour
             background.color = new Color(r, g, b, Mathf.Lerp(1, 0, fadePercent));
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        TypeText(message);
+        StartCoroutine(TypeText(message));
         yield return new WaitForSeconds(duration);
     }
 
