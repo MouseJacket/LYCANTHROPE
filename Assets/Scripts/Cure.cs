@@ -71,7 +71,7 @@ public class Cure : MonoBehaviour
             _interact.hasGun = false;
             revolverHold.SetActive(false);
         }
-        _werewolf.gameObject.tag = "Selectable";
+        _werewolf.MakeInteractable();
         Destroy(gameObject);
     }
 

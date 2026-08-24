@@ -15,7 +15,7 @@ public class RevolverGrab : MonoBehaviour
     public void GetGun()
     {
         _interaction.hasGun = true;
-        werewolf.gameObject.tag = "Selectable";
+        werewolf.MakeInteractable();
         revolverHeld.SetActive(true);
         Destroy(revolverObj);
     }

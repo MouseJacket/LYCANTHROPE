@@ -14,10 +14,10 @@ public class NoteInteractionScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI readText;
     [SerializeField] private RawImage noteBackground;
     private InteractionPrepper _interaction;
+    private bool _inputReleased;
+    
     private void Start()
     {
-        readText = GameObject.Find("NoteText").GetComponent<TextMeshProUGUI>();
-        noteBackground = GameObject.Find("NoteBackground").GetComponent<RawImage>();
         noteColor = GetComponent<MeshRenderer>().material.color;
         _interaction = FindAnyObjectByType<BasicMovement>().gameObject.GetComponent<InteractionPrepper>();
     }
@@ -33,8 +33,11 @@ public class NoteInteractionScript : MonoBehaviour
     {
         if (reading)
         {
-            if (_interaction.highlightedObject!= gameObject||
-                InputSystem.actions["Interact"].ReadValue<float>() > 0)
+            float inputValue = InputSystem.actions["Interact"].ReadValue<float>();
+            if (inputValue == 0)
+                _inputReleased = true;
+            if (_inputReleased && inputValue > 0 ||
+                _interaction.highlightedObject != gameObject)
             {
                 DropNote();
             }
@@ -43,10 +46,12 @@ public class NoteInteractionScript : MonoBehaviour
 
     public void ReadNote()
     {
+        Debug.Log($"Note - {gameObject.name}");
         noteBackground.enabled = true;
         noteBackground.color = noteColor;
         readText.text = noteText;
         reading = true;
+        _inputReleased = false;
     }
 
     public void DropNote()

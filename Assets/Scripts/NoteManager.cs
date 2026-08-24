@@ -24,7 +24,10 @@ public class NoteManager : MonoBehaviour
         ApplyCode(code);
         for (int i = 0; i < notes.Length; i++)
         {
-            MatchPos(notes[i].gameObject, spots[i].transform);
+            if (notes[i].gameObject != orderNote)
+            {
+                MatchPos(notes[i].gameObject, spots[i].transform);
+            }
         }
         foreach (GameObject spot in spots)
         {

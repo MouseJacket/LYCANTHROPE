@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -60,11 +61,16 @@ public class InteractionPrepper : MonoBehaviour
                 {
                     highlightedObject.GetComponent<RevolverGrab>().GetGun();
                 }
-                else if (highlightedObject.GetComponent<WerewolfTransform>())
+                else if (highlightedObject.layer == 3)
                 {
                     if (hasGun)
                     {
-                        RevolverEnding();
+                        SceneManager.LoadScene("GunshotCutscene");
+                    }
+
+                    if (hasSyringe)
+                    {
+                        SceneManager.LoadScene("CureCutscene");
                     }
                 }
                 else
@@ -100,13 +106,5 @@ public class InteractionPrepper : MonoBehaviour
             highlightedObject.GetComponent<MeshRenderer>().material = nativeMat;
             highlightedObject = null;
         }
-    }
-
-    void RevolverEnding()
-    {
-        winScreen.gameObject.SetActive(true);
-        readText.text = "You Killed Lucas Morgan";
-        DeselectObject();
-        Time.timeScale = 0;
     }
 }

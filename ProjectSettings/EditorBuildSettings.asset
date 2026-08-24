@@ -8,9 +8,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cabin - Beta.unity
     guid: f80dbc544aa90c64cade6719ae53ce7d
+  - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: 4ac4be6eb308cd1418cb346fe723d391
+  - enabled: 1
+    path: Assets/Scenes/Cabin - Final.unity
+    guid: 29424812c1e061448a805ece61f860ae
+  - enabled: 1
+    path: Assets/Scenes/GunshotCutscene.unity
+    guid: 6629b45022f82af4ab71abf2ea21bd1b
+  - enabled: 1
+    path: Assets/Scenes/CureCutscene.unity
+    guid: 51fd7b072a66a7d43b6680963709e124
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7151399527724214096b9996632575db, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
