@@ -34,6 +34,7 @@ public class CutsceneScript : MonoBehaviour
     
     private void Start()
     {
+        
         backgroundColor = background.color;
         screenText.text = "";
         _audio = GetComponent<AudioSource>();

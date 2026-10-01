@@ -12,16 +12,15 @@
   <component name="ChangeListManager">
     <list default="true" id="03e29a40-7048-4336-b3eb-dace471dc925" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Werewolf_Escape/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_0percent_v003.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_0percent_v003.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_25percent_v002.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Assets/Final_Models/Werewolf/FINAL/SM_Werewolf_25percent_v002.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cabin - Final.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cabin - Final.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CureCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CureCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DeathCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DeathCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GunshotCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GunshotCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioCutsceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioCutsceneScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CutsceneScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractionPrepper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionPrepper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WerewolfTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WerewolfTransform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkyTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkyTimer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +31,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioCutsceneScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CutsceneScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IngredientScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MaintanenceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RevolverGrab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SyringeScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -64,11 +65,22 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;PyConsoleConfigurable.Python Console&quot;,
     &quot;unity.profiler.toolWindow.autoShown&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Werewolf_Escape.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\eamon\OneDrive - Drexel University\Documents\GitHub\Werewolf_Escape\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.5.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\eamon\OneDrive - Drexel University\Documents\GitHub\Werewolf_Escape&quot; -debugCodeOptimization" />
@@ -121,6 +133,11 @@
       <workItem from="1787148032011" duration="3930000" />
       <workItem from="1787517742184" duration="20576000" />
       <workItem from="1787549987303" duration="13038000" />
+      <workItem from="1787563822092" duration="9806000" />
+      <workItem from="1788021092158" duration="25000" />
+      <workItem from="1788021330430" duration="5861000" />
+      <workItem from="1790168184276" duration="284000" />
+      <workItem from="1790686721754" duration="246000" />
     </task>
     <servers />
   </component>

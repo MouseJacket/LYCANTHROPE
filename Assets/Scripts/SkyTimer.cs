@@ -34,7 +34,7 @@ public class SkyTimer : MonoBehaviour
         {
             Debug.Log("OUT OF TIME!!");
             paused = true;
-            SceneManager.LoadScene("DeathCutscene");
+            SceneManager.LoadScene("DeathCutscene",LoadSceneMode.Single);
             Time.timeScale = 0;
         }
         if (timePercent >= intensityPoint)

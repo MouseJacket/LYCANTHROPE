@@ -21,6 +21,7 @@ public class AudioCutsceneScript : MonoBehaviour
     [SerializeField] private float postLineWait;
     [SerializeField] private float duration;
     [SerializeField] private AudioSource source;
+    private bool skippable;
 
     private void Start()
     {
@@ -30,13 +31,15 @@ public class AudioCutsceneScript : MonoBehaviour
         StartCoroutine(DelayedIntroFade());
         source = GetComponent<AudioSource>();
         screenText = FindAnyObjectByType<TextMeshProUGUI>();
+        skippable = false;
     }
 
     private IEnumerator DelayedIntroFade()
     {
-        yield return null; // Wait one frame for UI initialization
+        yield return null;
         StartCoroutine(IntroFade());
-        source = GetComponent<AudioSource>();
+        yield return new WaitForSeconds(1);
+        skippable = true;
     }
 
     public IEnumerator IntroFade()
@@ -61,7 +64,10 @@ public class AudioCutsceneScript : MonoBehaviour
             InputSystem.actions["Interact"].ReadValue<float>() > 0 ||
             InputSystem.actions["Attack"].ReadValue<float>() > 0)
         {
-            Skip();
+            if (skippable)
+            {
+                Skip();
+            }
         }
     }
 

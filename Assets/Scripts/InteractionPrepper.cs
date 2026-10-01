@@ -65,12 +65,12 @@ public class InteractionPrepper : MonoBehaviour
                 {
                     if (hasGun)
                     {
-                        SceneManager.LoadScene("GunshotCutscene");
+                        SceneManager.LoadScene("GunshotCutscene",LoadSceneMode.Single);
                     }
 
                     if (hasSyringe)
                     {
-                        SceneManager.LoadScene("CureCutscene");
+                        SceneManager.LoadScene("CureCutscene",LoadSceneMode.Single);
                     }
                 }
                 else
