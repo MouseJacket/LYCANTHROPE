@@ -1,4 +1,6 @@
 # LYCANTHROPE
+![alt text](https://cdna.artstation.com/p/assets/images/images/103/485/102/large/eamon-aveni-screenshot-2026-10-23-162617.jpg?1792787220)
+
 ### Play the Game: https://mouse-jacket.itch.io/werewolf-escape
 ## Created for DIGM-350-001 - SU 25-26 
 Stranded in the woods with no hope of direction, a lost hiker falls through the roof of a cabin while attempting to get a grasp of her surroundings. As she gets to her feet, she's apprehended by a man chained to a wall, warning her to be gone from the cabin within five minutes. It's up to you to find a way to escape, by any means necessary!
